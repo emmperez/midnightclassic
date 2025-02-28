@@ -62,7 +62,7 @@ export default function Hero() {
                         <ul className="[counter-reset:list-counter] [&>li]:pl-[2em] [&>li]:relative w-full lg:float-right lg:w-auto">
                             <h3 className="text-sm pb-4">selected works</h3>
                             {selectedWorks.map((project) => (
-                                <li key={project.id} className="flex flex-col justify-between items-start gap-4 pb-4 max-w-[400px] xl:min-w-[500px] [counter-increment:list-counter] before:content-[counter(list-counter,decimal-leading-zero)'\00a0\00a0\00a0'] before:absolute before:left-0 before:text-xs xl:text-md">
+                                <li key={project.id} className="flex flex-col justify-between items-start gap-4 pb-4 xl:max-w-[400px] xl:min-w-[500px] [counter-increment:list-counter] before:content-[counter(list-counter,decimal-leading-zero)'\00a0\00a0\00a0'] before:absolute before:left-0 before:text-xs xl:text-md">
                                     <div className="info flex flex-row justify-between items-start w-full">
                                         <div className="info flex gap-2">
                                             <h3 className="text-xs xl:text-md">{project.title}</h3>
@@ -104,7 +104,7 @@ export default function Hero() {
                         <ul className="w-full lg:float-right lg:w-auto">
                             <h3 className="text-sm pb-2">mini side projects</h3>
                             {miniSideProjects.map((project) => (
-                                <li key={project.id} className="flex flex-row justify-between items-center flex-wrap border-b border-black max-w-[400px] xl:min-w-[500px] before:text-xs xl:text-base">
+                                <li key={project.id} className="flex flex-row justify-between items-center flex-wrap border-b border-black xl:max-w-[400px] xl:min-w-[500px] before:text-xs xl:text-base">
                                     <div className="info flex justify-between w-full items-center">
                                         <Button variant="ghost" onClick={() => handleOpen(project.id)} className="p-0 hover:bg-transparent">
                                             <h3 className="text-xs">{project.title}</h3>
@@ -168,7 +168,7 @@ export default function Hero() {
                 exit={{ opacity: 0, y: 10 }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 className="heading absolute top-20 lg:top-auto lg:bottom-10 px-4 md:px-8">
-                    <h1 className="text-6xl xl:text-[200px] leading-none xl:leading-[160px] font-bold">
+                    <h1 className="text-6xl md:text-[100px] lg:text-[150px] xl:text-[200px] leading-none xl:leading-[160px] font-bold">
                         Emmanuel<br /> Perez
                     </h1>
                 </motion.div>
