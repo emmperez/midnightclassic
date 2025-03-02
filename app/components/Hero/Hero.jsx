@@ -63,7 +63,7 @@ export default function Hero() {
             null
         ) : (
             <section className="hero">
-                <div className="hero_container relative w-[100vw] h-[95vh] m-auto flex flex-wrap flex-col-reverse xl:flex-nowrap xl:flex-row xl:flex-row-reverse justify-evenly items-center xl:items-start">
+                <div className="hero_container relative w-[100vw] xl:h-[95vh] mt-24 xl:mt-0 flex flex-wrap flex-col-reverse xl:flex-nowrap xl:flex-row xl:flex-row-reverse justify-evenly items-center xl:items-start">
                     <div className="featured w-full xl:w-auto flex justify-end items-center xl:mt-24 px-4 md:px-8">
                     <motion.div 
                         initial={{ opacity: 0, y: 10 }}
