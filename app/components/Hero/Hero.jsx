@@ -126,7 +126,7 @@ export default function Hero() {
                             ))}                
                         </ul>
                         <ul className="w-full lg:float-right lg:w-auto">
-                            <h3 className="text-sm pb-2">mini side projects</h3>
+                            <h3 className="text-sm pb-2">mini side projects &mdash; <span className="text-xs">{miniSideProjects.length > 0 && `0${miniSideProjects.length}`}</span></h3>
                             {miniSideProjects.map((project) => (
                                 <li key={project.id} className="flex flex-row justify-between items-center flex-wrap border-b border-black xl:max-w-[400px] xl:min-w-[500px] before:text-xs xl:text-base">
                                     <div className="info flex justify-between w-full items-center">
