@@ -8,7 +8,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="custom-font no-scrollbar overflow-y-hidden">
+      <body className="custom-font no-scrollbar overflow-hidden">
         {children}
       </body>
     </html>
