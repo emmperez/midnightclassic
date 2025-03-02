@@ -63,7 +63,7 @@ export default function Hero() {
             null
         ) : (
             <section className="hero">
-                <div className="hero_container relative w-full h-[90vh]">
+                <div className="hero_container relative w-full h-[100vh]">
                     <div className="featured absolute bottom-10 lg:top-20 w-full px-4 md:px-8">
                     <motion.div 
                         initial={{ opacity: 0, y: 10 }}
