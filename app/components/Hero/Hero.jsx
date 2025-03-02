@@ -63,8 +63,8 @@ export default function Hero() {
             null
         ) : (
             <section className="hero">
-                <div className="hero_container relative w-full h-screen flex flex-col-reverse justify-evenly items-center lg:flex-col lg:h-[100vh]">
-                    <div className="featured w-full xl:h-full flex justify-end items-center px-4 md:px-8">
+                <div className="hero_container relative w-[100vw] h-[95vh] m-auto flex flex-wrap flex-col-reverse xl:flex-nowrap xl:flex-row xl:flex-row-reverse justify-evenly items-center xl:items-start">
+                    <div className="featured w-full xl:w-auto flex justify-end items-center xl:mt-24 px-4 md:px-8">
                     <motion.div 
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -199,7 +199,7 @@ export default function Hero() {
                         y: 10, 
                         transition: { duration: 1 }
                     }}
-                    className="heading w-full xl:h-full px-4 md:px-8 flex justify-start items-end mb-4">
+                    className="heading w-full xl:w-auto xl:h-full px-4 md:px-8 flex justify-start items-end mb-4">
                         <h1 className="text-6xl md:text-[100px] lg:text-[150px] xl:text-[200px] leading-none xl:leading-[160px] font-bold">
                             Emmanuel<br /> Perez
                         </h1>
