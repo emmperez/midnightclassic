@@ -1,4 +1,5 @@
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata = {
   title: "porfoliooohhhhhh",
@@ -10,6 +11,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="custom-font no-scrollbar overflow-hidden">
         {children}
+        <Analytics />
       </body>
     </html>
   );
