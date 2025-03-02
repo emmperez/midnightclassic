@@ -46,8 +46,13 @@ export default function Header() {
                         transition={{ duration: 1 }}
                         className="absolute inset-0 bg-white/60 backdrop-blur-md -z-10"
                     />
-                    
-                    <div className="header_top flex justify-between items-center">
+                    <div className="absolute left-0 top-0 h-[200%] w-full -translate-y-[30%] translate-z-0 origin-top-left pointer-events-none z-5 transition-transform duration-1000 ease-[cubic-bezier(.55,0,.1,1)]">
+                        <div className="absolute inset-0 z-2 backdrop-blur-[1px] [mask-image:linear-gradient(to_top,rgba(255,255,255,0)_0%,rgb(255,255,255)_12.5%,rgb(255,255,255)_37.5%,rgba(255,255,255,0)_50%)]" />
+                        <div className="absolute inset-0 z-3 backdrop-blur-[2px] [mask-image:linear-gradient(to_top,rgba(255,255,255,0)_12.5%,rgb(255,255,255)_37.5%,rgb(255,255,255)_50%,rgba(255,255,255,0)_62.5%)]" />
+                        <div className="absolute inset-0 z-4 backdrop-blur-[4px] [mask-image:linear-gradient(to_top,rgba(255,255,255,0)_37.5%,rgb(255,255,255)_50%,rgb(255,255,255)_62.5%,rgba(255,255,255,0)_75%)]" />
+                        <div className="absolute inset-0 z-5 backdrop-blur-[8px] [mask-image:linear-gradient(to_top,rgba(255,255,255,0)_50%,rgb(255,255,255)_62.5%,rgb(255,255,255)_75%,rgba(255,255,255,0)_87.5%)]" />
+                    </div>
+                    <div className="header_top flex justify-between items-center z-10">
                         <Button
                             variant="link"
                             className="hover:no-underline p-0 font-normal lowercase"
@@ -75,7 +80,7 @@ export default function Header() {
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                     exit={{ opacity: 0, transition: { duration: 0.5 } }}
-                                    className="flex flex-row justify-between items-center flex-wrap w-full gap-4"
+                                    className="flex flex-row justify-between items-center flex-wrap w-full gap-4 z-20"
                                 >
                                     <div className="about max-w-[600px]">
                                         <p className="text-sm text-pretty">
@@ -136,14 +141,7 @@ export default function Header() {
                             </motion.div>
                         )}
                     </AnimatePresence>
-                    
                 </motion.div>
-                <div className="absolute left-0 top-0 h-[280%] w-full -translate-y-[30%] translate-z-0 origin-top-left pointer-events-none z-5 transition-transform duration-1000 ease-[cubic-bezier(.55,0,.1,1)]">
-                    <div className="absolute inset-0 z-2 backdrop-blur-[1px] [mask-image:linear-gradient(to_top,rgba(255,255,255,0)_0%,rgb(255,255,255)_12.5%,rgb(255,255,255)_37.5%,rgba(255,255,255,0)_50%)]" />
-                    <div className="absolute inset-0 z-3 backdrop-blur-[2px] [mask-image:linear-gradient(to_top,rgba(255,255,255,0)_12.5%,rgb(255,255,255)_37.5%,rgb(255,255,255)_50%,rgba(255,255,255,0)_62.5%)]" />
-                    <div className="absolute inset-0 z-4 backdrop-blur-[4px] [mask-image:linear-gradient(to_top,rgba(255,255,255,0)_37.5%,rgb(255,255,255)_50%,rgb(255,255,255)_62.5%,rgba(255,255,255,0)_75%)]" />
-                    <div className="absolute inset-0 z-5 backdrop-blur-[8px] [mask-image:linear-gradient(to_top,rgba(255,255,255,0)_50%,rgb(255,255,255)_62.5%,rgb(255,255,255)_75%,rgba(255,255,255,0)_87.5%)]" />
-                </div>
             </header>
         )   
     );

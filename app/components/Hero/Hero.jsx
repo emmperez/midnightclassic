@@ -90,6 +90,7 @@ export default function Hero() {
                                             alt={project.title}
                                             width={1280}
                                             height={720}
+                                            priority
                                             onClick={() => handleFeaturedClick(project.id)}
                                             className="w-full h-full object-cover max-w-[128px] lg:max-w-[256px] lg:max-h-[144px] filter grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer"
                                         />
@@ -163,6 +164,7 @@ export default function Hero() {
                                                             alt={project.title} 
                                                             width={1280} 
                                                             height={720} 
+                                                            priority
                                                             className="w-full h-full object-cover pb-4"
                                                         />
                                                     </video>
@@ -172,6 +174,7 @@ export default function Hero() {
                                                         alt={project.title} 
                                                         width={1280} 
                                                         height={720} 
+                                                        priority
                                                         className="w-full h-full object-cover pb-4"
                                                     />
                                                 )}
