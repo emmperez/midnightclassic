@@ -3,10 +3,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 export default function Hero() {
     const [openFeatured, setOpenFeatured] = useState(false);
     const [openProjectId, setOpenProjectId] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 5000);
+    }, []);
+
     const selectedWorks = [
         {
             id: 1,
@@ -14,8 +23,9 @@ export default function Hero() {
             image: "/COMPASS.jpg",
             year: "2025",
             link: "https://compass-pied.vercel.app/",
-            tech: ["Next.js", "Typescript", "Tailwind CSS", "Sanity", "GSAP"],
-            description: "Developed COMPASS®, a dynamic wellness blog focused on self-improvement and mental health, utilizing modern web technologies for both front-end and back-end development. Designed and implemented reusable components using Next.js and TypeScript, optimizing for performance and accessibility. Integrated Sanity CMS for scalable content management and employed GSAP to create engaging, smooth animations for an interactive user experience.",
+            tech: ["Next.js", "Typescript", "Sanity", "Tailwind CSS", "shadcn/ui", "GSAP"],
+            description: "Developed COMPASS®, a dynamic wellness blog focused on self-improvement and mental health, utilizing modern web technologies for both front-end and back-end development. Designed and implemented reusable components using Next.js and TypeScript, optimizing for performance and accessibility. Integrated Sanity CMS for scalable content management and used GSAP to create engaging, smooth animations for an interactive user experience.",
+            disclaimer: "Project is still in development."
         },
     ];
 
@@ -48,14 +58,21 @@ export default function Hero() {
         }
     }
 
-    return (
-       <section className="hero">
-            <div className="hero_container relative w-full h-[100vh]">
-                <div className="featured absolute bottom-10 lg:top-20 w-full px-4 md:px-8">
+    return (        
+        isLoading ? (
+            null
+        ) : (
+            <section className="hero">
+                <div className="hero_container relative w-full h-[100vh]">
+                    <div className="featured absolute bottom-10 lg:top-20 w-full px-4 md:px-8">
                     <motion.div 
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 10 }}
+                        exit={{ 
+                            opacity: 0, 
+                            y: 10, 
+                            transition: { duration: 1 }
+                        }}
                         transition={{ duration: 0.5, ease: "easeInOut" }}
                         className="featured-work flex flex-col gap-4 float-right w-full xl:max-w-[500px]"
                     >
@@ -82,8 +99,11 @@ export default function Hero() {
                                             <motion.div 
                                                 initial={{ opacity: 0, y: 10 }}
                                                 animate={{ opacity: 1, y: 0 }}
-                                                exit={{ opacity: 0, y: 10 }}
-                                                transition={{ duration: 0.5, ease: "easeInOut" }}
+                                                exit={{ 
+                                                    opacity: 0, 
+                                                    y: 10, 
+                                                    transition: { duration: 1 }
+                                                }}
                                                 className="desc w-full pb-4"
                                             >
                                                 <p className="text-xs">{project.description}</p>
@@ -94,6 +114,9 @@ export default function Hero() {
                                                         </li>
                                                     ))}
                                                 </ul>
+                                                {project.disclaimer && (
+                                                    <p className="text-xs pt-4">{project.disclaimer}</p>
+                                                )}
                                                 <Link href={project.link} target="_blank" className="text-xs underline float-right">View</Link>
                                             </motion.div>
                                         )}   
@@ -116,8 +139,11 @@ export default function Hero() {
                                             <motion.div 
                                                 initial={{ opacity: 0, y: 10 }}
                                                 animate={{ opacity: 1, y: 0 }}
-                                                exit={{ opacity: 0, y: 10 }}
-                                                transition={{ duration: 0.5, ease: "easeInOut" }}
+                                                exit={{ 
+                                                    opacity: 0, 
+                                                    y: 10, 
+                                                    transition: { duration: 1 }
+                                                }}
                                                 className="desc w-full pb-4"
                                             >
                                                 {project.video ? (
@@ -165,14 +191,18 @@ export default function Hero() {
                 <motion.div 
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 10 }}
-                transition={{ duration: 0.5, ease: "easeInOut" }}
+                exit={{ 
+                    opacity: 0, 
+                    y: 10, 
+                    transition: { duration: 1 }
+                }}
                 className="heading absolute top-20 lg:top-auto lg:bottom-10 px-4 md:px-8">
                     <h1 className="text-6xl md:text-[100px] lg:text-[150px] xl:text-[200px] leading-none xl:leading-[160px] font-bold">
                         Emmanuel<br /> Perez
                     </h1>
                 </motion.div>
             </div>
-       </section>
-    )
+            </section>
+        )
+    );
 }

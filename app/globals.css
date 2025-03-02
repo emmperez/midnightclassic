@@ -50,7 +50,7 @@ body {
 @layer base {
   :root {
 
-    --background: 0 0% 100%;
+    --background: #F8F6F2;
 
     --foreground: 0 0% 3.9%;
 
