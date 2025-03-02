@@ -37,7 +37,7 @@ export default function Header() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 10 }}
                 transition={{ duration: 0.5, ease: "easeInOut"}}
-                style={{ height: expanded ? '100vh' : '64px' }}
+                style={{ height: expanded ? '100vh' : '0px' }}
                 className="header_container flex flex-col w-full px-4 md:px-8 fixed top-0 z-50">
                     <motion.div 
                         initial={{ opacity: 0 }}
