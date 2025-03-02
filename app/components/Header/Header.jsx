@@ -38,7 +38,7 @@ export default function Header() {
                 exit={{ opacity: 0, y: 10 }}
                 transition={{ duration: 0.5, ease: "easeInOut"}}
                 style={{ height: expanded ? '100vh' : '35px' }}
-                className="header_container flex flex-col w-full px-4 md:px-8 fixed top-0 z-50">
+                className="header_container flex flex-col w-full px-4 md:px-8 fixed top-0 z-50 border-b border-black">
                     <motion.div 
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -46,12 +46,6 @@ export default function Header() {
                         transition={{ duration: 1 }}
                         className="absolute inset-0 bg-white/60 backdrop-blur-md -z-10"
                     />
-                    <div className="absolute left-0 top-0 h-[200%] w-full -translate-y-[30%] translate-z-0 origin-top-left pointer-events-none z-5 transition-transform duration-1000 ease-[cubic-bezier(.55,0,.1,1)]">
-                        <div className="absolute inset-0 z-2 backdrop-blur-[1px] [mask-image:linear-gradient(to_top,rgba(255,255,255,0)_0%,rgb(255,255,255)_12.5%,rgb(255,255,255)_37.5%,rgba(255,255,255,0)_50%)]" />
-                        <div className="absolute inset-0 z-3 backdrop-blur-[2px] [mask-image:linear-gradient(to_top,rgba(255,255,255,0)_12.5%,rgb(255,255,255)_37.5%,rgb(255,255,255)_50%,rgba(255,255,255,0)_62.5%)]" />
-                        <div className="absolute inset-0 z-4 backdrop-blur-[4px] [mask-image:linear-gradient(to_top,rgba(255,255,255,0)_37.5%,rgb(255,255,255)_50%,rgb(255,255,255)_62.5%,rgba(255,255,255,0)_75%)]" />
-                        <div className="absolute inset-0 z-5 backdrop-blur-[8px] [mask-image:linear-gradient(to_top,rgba(255,255,255,0)_50%,rgb(255,255,255)_62.5%,rgb(255,255,255)_75%,rgba(255,255,255,0)_87.5%)]" />
-                    </div>
                     <div className="header_top flex justify-between items-center z-10">
                         <Button
                             variant="link"

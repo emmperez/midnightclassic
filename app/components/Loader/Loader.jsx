@@ -62,7 +62,7 @@ export default function Loader() {
         <AnimatePresence>
             {isLoading && (
                 <motion.div
-                    className="loader w-[100vw] h-[100vh] mx-auto flex justify-center items-center bg-black px-4 overflow-hidden no-scrollbar"
+                    className="loader w-full h-screen mx-auto flex justify-center items-center bg-black px-4 overflow-hidden no-scrollbar"
                     initial={{ opacity: 1 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0, transition: { duration: 0.5 } }}
