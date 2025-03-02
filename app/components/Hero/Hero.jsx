@@ -63,8 +63,8 @@ export default function Hero() {
             null
         ) : (
             <section className="hero">
-                <div className="hero_container relative w-full h-[100vh]">
-                    <div className="featured absolute bottom-10 lg:top-20 w-full px-4 md:px-8">
+                <div className="hero_container relative w-full h-screen flex flex-col-reverse justify-evenly items-center lg:flex-col lg:h-[100vh]">
+                    <div className="featured w-full xl:h-full flex justify-end items-center px-4 md:px-8">
                     <motion.div 
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -190,21 +190,21 @@ export default function Hero() {
                             <p className="text-xs">* this is just the start of what&rsquo;s coming. more projects and updates are on the way—stay tuned!</p>
                         </div>
                     </motion.div>
+                    </div>
+                    <motion.div 
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ 
+                        opacity: 0, 
+                        y: 10, 
+                        transition: { duration: 1 }
+                    }}
+                    className="heading w-full xl:h-full px-4 md:px-8 flex justify-start items-end mb-4">
+                        <h1 className="text-6xl md:text-[100px] lg:text-[150px] xl:text-[200px] leading-none xl:leading-[160px] font-bold">
+                            Emmanuel<br /> Perez
+                        </h1>
+                    </motion.div>
                 </div>
-                <motion.div 
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ 
-                    opacity: 0, 
-                    y: 10, 
-                    transition: { duration: 1 }
-                }}
-                className="heading absolute top-[15%] lg:top-auto lg:bottom-10 px-4 md:px-8">
-                    <h1 className="text-6xl md:text-[100px] lg:text-[150px] xl:text-[200px] leading-none xl:leading-[160px] font-bold">
-                        Emmanuel<br /> Perez
-                    </h1>
-                </motion.div>
-            </div>
             </section>
         )
     );
