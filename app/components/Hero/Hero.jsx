@@ -199,7 +199,7 @@ export default function Hero() {
                     y: 10, 
                     transition: { duration: 1 }
                 }}
-                className="heading absolute top-20 lg:top-auto lg:bottom-10 px-4 md:px-8">
+                className="heading absolute top-[15%] lg:top-auto lg:bottom-10 px-4 md:px-8">
                     <h1 className="text-6xl md:text-[100px] lg:text-[150px] xl:text-[200px] leading-none xl:leading-[160px] font-bold">
                         Emmanuel<br /> Perez
                     </h1>
