@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
+import { selectedWorks, miniSideProjects } from "@/app/data";
 
 export default function Hero() {
     const [openFeatured, setOpenFeatured] = useState(false);
@@ -16,30 +17,6 @@ export default function Hero() {
         }, 5000);
     }, []);
 
-    const selectedWorks = [
-        {
-            id: 1,
-            title: `COMPASS®`,
-            image: "/COMPASS.jpg",
-            year: "2025",
-            link: "https://compass-pied.vercel.app/",
-            tech: ["Next.js", "Typescript", "Sanity", "Tailwind CSS", "shadcn/ui", "GSAP"],
-            description: "Developed COMPASS®, a dynamic wellness blog focused on self-improvement and mental health, utilizing modern web technologies for both front-end and back-end development. Designed and implemented reusable components using Next.js and TypeScript, optimizing for performance and accessibility. Integrated Sanity CMS for scalable content management and used GSAP to create engaging, smooth animations for an interactive user experience.",
-            disclaimer: "Project is still in development."
-        },
-    ];
-
-    const miniSideProjects = [
-        {
-            id: 1,
-            title: "PORTFOLIO SITE FOR FELIX PEREYRA [ RDA ]",
-            image: "/RDA.jpg",
-            video: "/rda.mp4",
-            year: "2025",
-            link: "https://www.felixpereyra.net",
-            description: "Designed and developed a portfolio and design house website for Felix Pereyra, a New Jersey-based designer. Delivered a sleek, user-friendly platform to highlight branding, visual identity, and digital projects, incorporating SEO optimization and responsive design for an enhanced user experience.",
-        },
-    ];
 
     const handleOpen = (id) => {
         setOpenProjectId(openProjectId === id ? null : id);
@@ -63,7 +40,7 @@ export default function Hero() {
             null
         ) : (
             <section className="hero">
-                <div className="hero_container relative w-screen h-[95vh] my-12 xl:my-0 flex flex-wrap flex-col-reverse xl:flex-nowrap xl:flex-row xl:flex-row-reverse justify-evenly items-center xl:items-start">
+                <div className="hero_container relative w-screen h-screen my-12 xl:my-0 flex flex-wrap flex-col-reverse xl:flex-nowrap xl:flex-row xl:flex-row-reverse justify-evenly items-center xl:items-start">
                     <div className="featured w-full xl:w-auto flex justify-end items-center xl:mt-24 px-4 md:px-8">
                     <motion.div 
                         initial={{ opacity: 0, y: 10 }}
