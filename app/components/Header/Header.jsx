@@ -79,10 +79,9 @@ export default function Header() {
                                     <div className="about max-w-[600px]">
                                         <p className="text-sm text-pretty">
                                             <span className="pr-2 font-bold">about me</span>
-                                            hey! i'm a frontend dev with a passion for collaborating with cross-functional 
-                                            teams to deliver seamless user experiences. i'm on the lookout for new opportunities 
-                                            to grow and expand my skills. i'm currently in new jersey and open to remote positions or 
-                                            local to nyc & chicago.
+                                            hey! i'm a frontend dev with a passion for delivering seamless user experiences. 
+                                            i'm on the lookout for new opportunities to grow and expand my skills. i'm currently in 
+                                            new jersey and open to remote positions or local to nyc & chicago.
                                         </p>
                                         <p className="text-xs italic pt-2 font-thin">this site was built with next.js, tailwind, and framer motion <Link 
                                             className="underline font-normal" 
