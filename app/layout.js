@@ -8,7 +8,21 @@ export const metadata = {
   icons: {
     icon: '/favicon.ico',
     apple: '/icons/apple-touch-icon.png',
-    og: '/icons/og-image.png'
+    openGraph: {
+      title: 'Emmanuel Perez - Frontend Developer',
+      description: 'Emmanuel Perez is a Frontend Developer based in New Jersey and working globally. Specialized in delivering seamless user experiences.',
+      siteName: 'Emmanuel Perez - Frontend Developer',
+      images: [
+        {
+          url: '/og-image.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Emmanuel Perez - Frontend Developer',
+        },
+      ],
+      locale: 'en_US',
+      type: 'website',
+    }
   },
 };
 
