@@ -1,5 +1,7 @@
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react"
+import { ReactLenis } from 'lenis/react'
+
 
 export const metadata = {
   title: "Emmanuel Perez - Frontend Developer",
@@ -8,11 +10,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className="custom-font">
-        {children}
-        <Analytics />
-      </body>
-    </html>
+    <ReactLenis root>
+      <html lang="en">
+        <body className="custom-font">
+          {children}
+          <Analytics />
+        </body>
+      </html>
+    </ReactLenis>
   );
 }
