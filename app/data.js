@@ -5,7 +5,7 @@ const selectedWorks = [
         image: "/COMPASS.jpg",
         year: "2025",
         link: "https://compass-pied.vercel.app/",
-        tech: ["Next.js", "Typescript", "Sanity", "Tailwind CSS", "framer-motion", "shadcn/ui", "GSAP"],
+        tech: ["Next.js", "Typescript", "Sanity", "Tailwind CSS", "framer-motion", "GSAP"],
         description: "Developed COMPASS®, a dynamic wellness blog focused on self-improvement and mental health, utilizing modern web technologies for both front-end and back-end development. Designed and implemented reusable components using Next.js and TypeScript, optimizing for performance and accessibility. Integrated Sanity CMS for scalable content management and used GSAP to create engaging, smooth animations for an interactive user experience.",
         disclaimer: "Project is still in development."
     },
