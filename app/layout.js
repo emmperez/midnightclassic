@@ -6,8 +6,8 @@ export const metadata = {
   title: "Emmanuel Perez - Frontend Developer",
   description: "Emmanuel Perez is a Frontend Developer based in New Jersey and working globally. Specialized in delivering seamless user experiences.",
   icons: {
-    icon: '/favicon.ico',
-    apple: '/icons/apple-touch-icon.png',    
+    icon: 'https://emmanueleperez.com/favicon.ico',
+    apple: 'https://emmanueleperez.com/icons/apple-touch-icon.png',    
   },
   openGraph: {
     title: 'Emmanuel Perez - Frontend Developer',
