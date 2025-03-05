@@ -15,7 +15,7 @@ export const metadata = {
     siteName: 'Emmanuel Perez - Frontend Developer',
     images: [
       {
-        url: '/og-image.jpg',
+        url: 'https://emmanueleperez.com/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Emmanuel Perez - Frontend Developer',
